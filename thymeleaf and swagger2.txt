@@ -1,0 +1,63 @@
+Thymleaf 
+it is modern server side java template engine 
+this is used as view layer of our application
+idea of thymleaf is to make our html page dynamic by adding custom tags of thymleaf 
+thymleaf allows seemless communication between webdesigner and application developer 
+ 
+
+Swagger 2 
+
+DOCUMENTATATION-
+	-WRITE MANUALLY(it is time consuming)
+	-Automatically generates this Documentation 
+	-Swagger
+
+it is an open source project used to generate rest api documentation 
+it also gives you an user interface to access your rest end point via browser 
+following are the steps to carried out in order to use swagger in application 
+1)Add dependancy in pom.xml
+2)Configure swagger
+3)Enabling swagger 
+4)Adding more annnotations 
+
+
+Actuator It helps you to monitor and manage
+Spring boot actuator gives you number of Builtin end points and lets you add your own end points
+Optionally you can enable or disable each individual end points
+Steps to use Actuator
+1.Add the dependencies in pom.xm
+2.optionally,add properties in application.properties file
+
+http:/localhost:8080/actuator
+This is a default endpoints given by actuator 
+This end points tells you all the end points given by default 
+General syntax of end points is as follows 
+/actuator/id
+id is built-in end point given by actuator 
+ex:/actuator/health 
+This end point gives us the health information about the application 
+Enabling the atcuator end points 
+management.endpoint.id.enabled=true
+/actuator/beans= This endpoint displys complete list of beans configured in application
+
+
+--------------------**************************----------------------------------------
+JWT
+Json Web Token 
+	header.payload.signature
+	
+	header-Algorithm used for token generation 
+
+	payload-additional information while generating the token (username,roles)
+
+	signature-private sensitive String value which validates thin token 
+		(This string ONLY on server not shared with client)
+		(This string should be very complext so that it can't be guessed)
+
+
+Json web token
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.							-header
+eyJ1c2Vybm5hbWUiOiJ6ZW5zYXIiLCJleHAiOjE2NDc5MjcyMzJ9.					-payload
+MjYNQuGsAitZf4X860pVLJ_1CHLVfttjj8Ewhd0So_lvRidWic9gkAZ14p59_mZXt_DkUzxgXHGrPNiC2VT6nw	-signature
+	

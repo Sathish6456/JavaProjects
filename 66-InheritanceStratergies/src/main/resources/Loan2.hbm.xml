@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+  
+ <hibernate-mapping >
+ <class name="com.zensar.training.bean.Loan" table="LOAN20" >
+	<id name="loanId" column="loanId">
+	<generator class="assigned"></generator>
+</id>
+
+
+<property name="customerName" column="loanCustomer"></property>
+<property name="loanAmt" column="loanAmt"></property>
+<property name="loanDate" column="loanDate"></property>
+
+		<union-subclass name="com.zensar.training.bean.HomeLoan" table="HomeLoan20">
+			<property name="homeAddress" column="PropertyAddress"></property>
+			<property name="ownedBy" column="Owner"></property>
+		</union-subclass> 
+		
+		<union-subclass name="com.zensar.training.bean.CarLoan" table="CarLoan20">
+			<property name="carDetails" column="carDetails"></property>
+			<property name="registeredState" column="RegState"></property>
+</union-subclass>
+</class> 
+            
+ </hibernate-mapping>  

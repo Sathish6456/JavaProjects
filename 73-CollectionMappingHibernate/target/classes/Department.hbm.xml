@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.zensar.training.bean.pack3.Department">
+<id name="departmentId">
+<generator class="native"></generator>
+</id>
+
+<property name="departmentName"></property>
+<list name="employees" table="department10_employees10">
+<key column="dept_id"></key>
+<index column="idx"></index>
+<composite-element class="com.zensar.training.bean.pack3.Employee">
+<property name="employeeName"></property>
+<property name="grade"></property>
+<property name="gender">
+<type name="org.hibernate.type.EnumType">
+<param name="enumClass">com.zensar.training.bean.pack3.Gender</param>
+<param name="userNamed">true</param>
+</type>
+</property>
+</composite-element>
+</list>
+</class>
+	
+</hibernate-mapping>

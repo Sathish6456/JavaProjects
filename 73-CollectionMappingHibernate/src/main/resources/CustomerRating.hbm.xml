@@ -1,0 +1,28 @@
+<?xml version="1.0"?> 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+
+
+<class name="com.zensar.training.bean.pack6.CustomerRating" table="CustomerRatings">
+
+<id name="id">
+<generator class="native"></generator>
+</id>
+
+<property name="ratedBy"></property>
+
+<map name="customerRating" table="CustomerRating_Details">
+<key column="id"></key>
+<map-key column="rating" type="java.lang.String"></map-key>
+<composite-element class="com.zensar.training.bean.pack6.Customer">
+<property name="name"></property>
+<property name="city"></property>
+<property name="balance"></property>
+</composite-element>
+
+</map>
+</class>
+</hibernate-mapping>

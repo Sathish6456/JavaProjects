@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.zensar.training.bean.pack4.TeamMember">
+<id name="memberId">
+<generator class="native"></generator>
+</id>
+<property name="memberName"></property>
+<map name="skillDetails">
+<key column="member_id">
+</key>
+<map-key column="technology" type="java.lang.String"></map-key>
+<element column="rating" type="java.lang.Integer"></element>
+
+</map>
+
+</class>
+	
+</hibernate-mapping>

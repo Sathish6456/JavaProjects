@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name ="com.zensar.training.bean.pack2.Country" table="countries">
+	<id name="countryId">
+	
+	<generator class="native"></generator>
+	</id>
+	<property name="countryName"></property>
+	<set name="cityNames" table="countries10_cities10">
+	<key column="country_id"></key>
+	<element column="cityName" type="java.lang.String"></element>
+	</set>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.zensar.training.bean.pack5.ContactInfo" table="Contact30">
+<id name="contactId">
+<generator class="native"> </generator>
+</id>
+
+<property name="email"></property>
+<property name="phone"></property>
+</class>
+	
+</hibernate-mapping>

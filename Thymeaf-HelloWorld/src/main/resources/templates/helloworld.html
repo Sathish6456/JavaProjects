@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title></title>
+<link th:href="@{/css/main.css}" rel="stylesheet">				
+<script type="text/javascript" th:src="@{/js/action.js}">	
+	
+</script>		
+</head>
+<body>
+	
+		<h1 th:text="${{key}}">This is my first program using Thymeleaf</h1>
+		
+		
+		<p>
+		Here i am adding the css and javascript using thymeleaf <strong>very special </strong>styling
+		</p>
+		
+		<button type="button" th:onclick="demo()">Show Alert</button>
+		
+</body>
+</html>

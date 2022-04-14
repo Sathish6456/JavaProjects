@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="com.zensar.training.bean.pack4.Person" table="Person20">
+<id name="personId" type="int">
+<generator class="assigned"></generator>
+</id>
+
+<property name="personName"></property>
+<property name="dateOfBirth"></property>
+<property name="gender"></property>
+
+<many-to-one name="contactInfo" 
+			cascade="all" 
+			class="com.zensar.training.bean.pack4.ContactInfo"
+			lazy="false" 	
+			unique="true" 
+			not-null="false"></many-to-one>
+</class>
+
+</hibernate-mapping>

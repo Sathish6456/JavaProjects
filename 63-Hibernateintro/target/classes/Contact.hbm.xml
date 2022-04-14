@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.zensar.training.bean.Contact" table="contacts">
+    <id name="id"  column="c_id">
+    <generator class="native"></generator>
+    </id>
+  	<property name="name" column="c_name"></property>
+  	<property name="age" column="c_age"></property>
+  	<property name="phone" column="c_phone"></property>
+  </class>
+   
+</hibernate-mapping>

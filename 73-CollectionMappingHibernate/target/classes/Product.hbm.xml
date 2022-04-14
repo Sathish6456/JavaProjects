@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+
+
+
+<hibernate-mapping>
+<class name="com.zensar.training.bean.pack1.Product"
+table="products10">
+<id name="productId">
+<generator class="native"></generator>
+
+
+
+
+</id>
+<property name="productName"></property>
+<list name="plannedOffersPrices"
+table="products10_plannedOffers10">
+<key column="product_Id"></key>
+<index column="idx"></index>
+<element column="offerPrice" type="java.lang.Double"></element>
+
+
+
+
+</list>
+
+
+
+
+
+
+</class>
+
+
+
+
+</hibernate-mapping>

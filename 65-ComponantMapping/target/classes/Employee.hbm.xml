@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.jboss.org/dtd/hibernate/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.zensar.training.bean.Employee" table="Employees1">
+  <id name="id" column="EMPID">
+  <generator class="native"> </generator>
+  </id>
+<property name="name" column="ENAME"></property>
+<property name="basicSalary" column="EBASIC"></property>
+<component name= "address" >
+
+<property name="doorNumber" column="EDOORNO"></property>
+<property name="areaName" column="EAREANAME"></property>
+<property name="cityName" column="ECITYNAME"></property>
+</component>  
+</class>
+</hibernate-mapping>

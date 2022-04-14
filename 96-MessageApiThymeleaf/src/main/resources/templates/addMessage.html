@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title></title>
+</head>
+
+<body>
+	<form method="POST" th:action="@{/message/add}" th:object="${message}">
+		Id<input type="text" th:field="*{id}"><br/>
+		Message<input type="text" th:field="*{name}"><br/>
+		<input type="submit" value="Create Message">
+		</form>
+</body>
+
+</html >

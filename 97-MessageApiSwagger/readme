@@ -1,0 +1,25 @@
+HTTP status codes
+It must to return appropriate status code from server app to client app 
+
+
+2xx		success
+-----------------------------------------------
+200		OK
+201		created
+204		no content
+
+
+
+
+4xx		are client errors
+--------------------------------------------------
+400		bad request					-validation rules are failed
+404		not found					-resource looking not present on server
+401		unauthorized				-wrong credentials	
+403		forbidden					-don't have access to a resource
+
+
+
+5xx		server errors				
+---------------------------------------------------
+500		Internal server error
